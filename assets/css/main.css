@@ -2353,7 +2353,8 @@
 				margin-left: -1em;
 				padding: 0;
 				table-layout: fixed;
-				width: calc(100% + 1em);
+				/*width: calc(100% + 1em);*/
+				width: auto;
 			}
 
 				ul.actions.fit li {
@@ -2368,7 +2369,8 @@
 
 				ul.actions.fit.small {
 					margin-left: -0.5em;
-					width: calc(100% + 0.5em);
+					/*width: calc(100% + 0.5em);*/
+					width: auto;
 				}
 
 					ul.actions.fit.small li {

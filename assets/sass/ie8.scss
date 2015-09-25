@@ -1,118 +1,148 @@
 @import 'libs/vars';
 @import 'libs/functions';
 @import 'libs/mixins';
+@import 'libs/skel';
 
 /*
-	Big Picture by HTML5 UP
+	Highlights by HTML5 UP
 	html5up.net | @n33co
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-/* Section/Article */
+/* Basic */
 
-	section > .last-child,
-	article > .last-child,
-	section.last-child,
-	article.last-child {
-		margin-bottom: 0;
+	body, html {
+		height: 100%;
+	}
+
+	html {
+		background: none;
+	}
+
+/* List */
+
+	ul {
+		&.actions {
+			li {
+				padding: 0 0 0 (_size(element-margin) * 0.5);
+
+				&:first-child {
+					padding-left: 0;
+				}
+			}
+		}
 	}
 
 /* Form */
 
-	form {
-		input[type="text"],
-		input[type="email"],
-		input[type="password"],
-		select,
-		textarea {
-			position: relative;
-			-ms-behavior: url('assets/js/ie/PIE.htc');
-			border: solid 1px #ccc;
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	select,
+	textarea {
+		border: solid 2px _palette(border);
+		position: relative;
+	}
+
+	input[type="text"],
+	input[type="password"],
+	input[type="email"] {
+		line-height: _size(element-height);
+	}
+
+	input[type="checkbox"],
+	input[type="radio"] {
+		font-size: 3em;
+
+		& + label {
+			&:before {
+				display: none;
+			}
 		}
 	}
 
 /* Button */
 
-	input[type="button"],
 	input[type="submit"],
 	input[type="reset"],
-	.button,
-	button {
-		position: relative;
-		-ms-behavior: url('assets/js/ie/PIE.htc');
-
-		&.down {
-			text-indent: 0;
-		}
+	input[type="button"],
+	button,
+	.button {
+		border: solid 2px _palette(border);
 	}
 
-/* Intro */
+/* Main BG */
 
-	#intro {
-		-ms-behavior: url('assets/js/ie/backgroundsize.min.htc');
-		background: url('../../images/intro.jpg');
+	.main-bg {
+		z-index: 0;
+	}
+
+/* Main */
+
+	.main {
 		background-size: cover;
 
-		.content {
+		.container {
+			background: _palette(bg);
+			border-top: solid 1px _palette(border);
 			position: relative;
 			z-index: 1;
 		}
+
+		.goto-next {
+			@include icon;
+
+			&:before {
+				color: _palette(border);
+				content: '\f063';
+				display: block;
+				font-size: 2em;
+				height: 2em;
+				left: 0;
+				line-height: 2em;
+				position: absolute;
+				text-align: center;
+				text-indent: 0;
+				top: 0;
+				width: 2em;
+			}
+		}
+	}
+
+/* Header */
+
+	#header {
+		-ms-behavior: url('assets/js/ie/backgroundsize.min.htc');
+		background-image: url('../../images/bg.jpg');
+		background-size: cover;
+		height: 100%;
 
 		&:after {
-			content: '';
-			background: url('images/overlay.png');
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			left: 0;
-			top: 0;
+			min-height: 100%;
 		}
-	}
 
-/* One */
-
-	#one {
-		-ms-behavior: url('assets/js/ie/backgroundsize.min.htc');
-		background: url('../../images/one.jpg');
-		background-size: cover;
-
-		.content {
+		header {
 			position: relative;
 			z-index: 1;
 		}
 
-		&.left:before,
-		&.right:after {
-			content: '';
-			background: url('images/overlay.png');
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			left: 0;
-			top: 0;
+		.container {
+			background: _palette(bg);
+			z-index: 1;
 		}
 	}
 
-/* Two */
+/* Footer */
 
-	#two {
+	#footer {
 		-ms-behavior: url('assets/js/ie/backgroundsize.min.htc');
-		background: url('../../images/two.jpg');
+		background-image: url('../../images/bg.jpg');
 		background-size: cover;
 
-		.content {
+		.container {
+			background: _palette(bg);
+			border-top: solid 1px _palette(border);
 			position: relative;
 			z-index: 1;
-		}
-
-		&.left:before,
-		&.right:after {
-			content: '';
-			background: url('images/overlay.png');
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			left: 0;
-			top: 0;
 		}
 	}

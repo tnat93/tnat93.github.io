@@ -1,114 +1,147 @@
 /*
-	Big Picture by HTML5 UP
+	Highlights by HTML5 UP
 	html5up.net | @n33co
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-/* Section/Article */
+/* Basic */
 
-	section > .last-child,
-	article > .last-child,
-	section.last-child,
-	article.last-child {
-		margin-bottom: 0;
+	body, html {
+		height: 100%;
 	}
+
+	html {
+		background: none;
+	}
+
+/* List */
+
+	ul.actions li {
+		padding: 0 0 0 1em;
+	}
+
+		ul.actions li:first-child {
+			padding-left: 0;
+		}
 
 /* Form */
 
-	form input[type="text"],
-	form input[type="email"],
-	form input[type="password"],
-	form select,
-	form textarea {
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	select,
+	textarea {
+		border: solid 2px #dddddd;
 		position: relative;
-		-ms-behavior: url("assets/js/ie/PIE.htc");
-		border: solid 1px #ccc;
 	}
+
+	input[type="text"],
+	input[type="password"],
+	input[type="email"] {
+		line-height: 3em;
+	}
+
+	input[type="checkbox"],
+	input[type="radio"] {
+		font-size: 3em;
+	}
+
+		input[type="checkbox"] + label:before,
+		input[type="radio"] + label:before {
+			display: none;
+		}
 
 /* Button */
 
-	input[type="button"],
 	input[type="submit"],
 	input[type="reset"],
-	.button,
-	button {
-		position: relative;
-		-ms-behavior: url("assets/js/ie/PIE.htc");
+	input[type="button"],
+	button,
+	.button {
+		border: solid 2px #dddddd;
 	}
 
-		input[type="button"].down,
-		input[type="submit"].down,
-		input[type="reset"].down,
-		.button.down,
-		button.down {
-			text-indent: 0;
-		}
+/* Main BG */
 
-/* Intro */
+	.main-bg {
+		z-index: 0;
+	}
 
-	#intro {
-		-ms-behavior: url("assets/js/ie/backgroundsize.min.htc");
-		background: url("../../images/intro.jpg");
+/* Main */
+
+	.main {
 		background-size: cover;
 	}
 
-		#intro .content {
+		.main .container {
+			background: #fff;
+			border-top: solid 1px #dddddd;
 			position: relative;
 			z-index: 1;
 		}
 
-		#intro:after {
-			content: '';
-			background: url("images/overlay.png");
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			left: 0;
-			top: 0;
+		.main .goto-next {
+			text-decoration: none;
 		}
 
-/* One */
+			.main .goto-next:before {
+				-moz-osx-font-smoothing: grayscale;
+				-webkit-font-smoothing: antialiased;
+				font-family: FontAwesome;
+				font-style: normal;
+				font-weight: normal;
+				text-transform: none !important;
+			}
 
-	#one {
+			.main .goto-next:before {
+				color: #dddddd;
+				content: '\f063';
+				display: block;
+				font-size: 2em;
+				height: 2em;
+				left: 0;
+				line-height: 2em;
+				position: absolute;
+				text-align: center;
+				text-indent: 0;
+				top: 0;
+				width: 2em;
+			}
+
+/* Header */
+
+	#header {
 		-ms-behavior: url("assets/js/ie/backgroundsize.min.htc");
-		background: url("../../images/one.jpg");
+		background-image: url("../../images/bg.jpg");
 		background-size: cover;
+		height: 100%;
 	}
 
-		#one .content {
+		#header:after {
+			min-height: 100%;
+		}
+
+		#header header {
 			position: relative;
 			z-index: 1;
 		}
 
-		#one.left:before, #one.right:after {
-			content: '';
-			background: url("images/overlay.png");
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			left: 0;
-			top: 0;
-		}
-
-/* Two */
-
-	#two {
-		-ms-behavior: url("assets/js/ie/backgroundsize.min.htc");
-		background: url("../../images/two.jpg");
-		background-size: cover;
-	}
-
-		#two .content {
-			position: relative;
+		#header .container {
+			background: #fff;
 			z-index: 1;
 		}
 
-		#two.left:before, #two.right:after {
-			content: '';
-			background: url("images/overlay.png");
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			left: 0;
-			top: 0;
+/* Footer */
+
+	#footer {
+		-ms-behavior: url("assets/js/ie/backgroundsize.min.htc");
+		background-image: url("../../images/bg.jpg");
+		background-size: cover;
+	}
+
+		#footer .container {
+			background: #fff;
+			border-top: solid 1px #dddddd;
+			position: relative;
+			z-index: 1;
 		}

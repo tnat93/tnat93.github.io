@@ -1,4 +1,4 @@
-var Elevator = function(options) {
+var Elevator = function() {
 
   'use strict';
 
@@ -182,3 +182,12 @@ var Elevator = function(options) {
 
   init(options);
 };
+
+window.onload = function(){
+  var elevator = new Elevator({
+    element: document.querySelector('.elevator-button'),
+    mainAudio: '/src/to/audio.mp3',
+    endAudio: '/src/to/end-audio.mp3'
+  });
+}
+elevator.elevate();

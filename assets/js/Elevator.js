@@ -178,14 +178,14 @@ var Elevator = function() {
           endAudio = new Audio( _options.endAudio );
           endAudio.setAttribute( 'preload', 'true' );
       }
+  }
 
-      window.onload = function(){
-			  var elevator = new Elevator({
-			    element: document.querySelector('.elevator-button'),
-			    mainAudio: '/src/to/audio.mp3',
-			    endAudio: '/src/to/end-audio.mp3'
-			  });
-			}
+  window.onload = function(){
+    var elevator = new Elevator({
+      element: document.querySelector('.elevator-button'),
+      mainAudio: '/src/to/audio.mp3',
+      endAudio: '/src/to/end-audio.mp3'
+    });
   }
 
   init(options);

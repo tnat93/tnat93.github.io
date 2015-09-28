@@ -180,14 +180,5 @@ var Elevator = function() {
       }
   }
 
-  window.onload = function(){
-    var elevator = new Elevator({
-      element: document.querySelector('.elevator-button'),
-      mainAudio: '/src/to/audio.mp3',
-      endAudio: '/src/to/end-audio.mp3'
-    });
-  }
-
   init(options);
-  elevator.elevate();
 };
